@@ -7,8 +7,6 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Wiphawee_Portfolio',
-  description: 'Created with v0',
-  generator: 'v0.app',
   icons: {
     icon: '/favicon.ico?v=1',
     shortcut: '/favicon.ico?v=1',
