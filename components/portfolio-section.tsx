@@ -8,6 +8,26 @@ import { ExternalLink, Github } from "lucide-react"
 export function PortfolioSection() {
   const projects = [
 
+ 
+  
+    {
+      title: "rock-paper-scissors",
+      description:
+        "Rock–Paper–Scissors — A classic game with switchable themes:  Halloween (Pumpkin,  Bat) and Galaxy (Star, Planet).",
+      image: "/battle.png",
+      technologies: ["React", "Node.js","Tailwind CSS","supabase"],
+      liveUrl: "https://rock-paper-scissors-battles.netlify.app/",
+      githubUrl: "https://github.com/wipaweenan/rock-paper-scissors",
+    },
+    {
+      title: "minishop",
+      description:
+        "MiniShop — A mock-up online store where users can browse, search, and select products easily.",
+      image: "/minishop.png",
+      technologies: ["React", "Node.js","Tailwind CSS"],
+      liveUrl: "https://68ca3fab437189000d57dfe3--stately-biscochitos-05f8e5.netlify.app/",
+      githubUrl: "https://github.com/wipaweenan/minishop",
+    },
     {
       title: "advice-generator",
       description:
@@ -16,16 +36,6 @@ export function PortfolioSection() {
       technologies: ["Vue.js", "Node.js"],
       liveUrl: "https://advice-generator-app-main-plum.vercel.app/",
       githubUrl: "https://github.com/wipaweenan/advice-generator-app-main",
-    },
-  
-    {
-      title: "time-tracking-dashboard",
-      description:
-        "Time Tracking Dashboard helps users track and visualize their daily activities for better productivity and time management.",
-      image: "/time-tracking-dashboard.png",
-      technologies: ["React", "Node.js","Tailwind CSS"],
-      liveUrl: "https://time-tracking-dashboard-drab-five.vercel.app/",
-      githubUrl: "https://github.com/wipaweenan/Time-tracking-dashboard",
     },
   ]
 
