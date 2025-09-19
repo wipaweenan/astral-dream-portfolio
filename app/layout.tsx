@@ -3,6 +3,9 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/next'
 import { BackToTop } from '@/components/back-to-top'
+import { ThemeProvider } from '@/components/theme-provider'
+import { PortfolioThemeProvider } from '@/components/theme-provider'
+import { ThemeToggle } from '@/components/theme-toggle'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -27,9 +30,19 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1" />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        {children}
-        <BackToTop />
-        <Analytics />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <PortfolioThemeProvider>
+            {children}
+            <ThemeToggle />
+            <BackToTop />
+            <Analytics />
+          </PortfolioThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

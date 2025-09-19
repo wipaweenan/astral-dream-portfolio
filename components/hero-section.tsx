@@ -17,7 +17,7 @@ export function HeroSection() {
       <div className="text-center z-10 max-w-4xl mx-auto px-6">
         <div className="float">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
-          <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
+          <span className="cosmic-gradient">
               Wiphawee Sringern
           </span>
           </h1>

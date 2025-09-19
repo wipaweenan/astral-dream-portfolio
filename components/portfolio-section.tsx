@@ -4,12 +4,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
+import { usePortfolioTheme } from "@/components/theme-provider"
 
 export function PortfolioSection() {
+  const { theme } = usePortfolioTheme()
   const projects = [
-
- 
-  
     {
       title: "rock-paper-scissors",
       description:
@@ -44,7 +43,7 @@ export function PortfolioSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="cosmic-gradient">
               Featured Projects
             </span>
           </h2>
@@ -85,7 +84,7 @@ export function PortfolioSection() {
                 </div>
 
                 <div className="flex gap-3">
-                  <Button size="sm" className="flex-1 glass glow rounded-xl text-white hover:text-yellow-400 transition-all duration-300" asChild>
+                  <Button size="sm" className={`flex-1 glass glow rounded-xl text-white hover:text-yellow-400 transition-all duration-300 ${theme === 'galaxy' ? 'galaxy-glow' : 'glow'}`} asChild>
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo

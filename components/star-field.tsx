@@ -55,7 +55,7 @@ export function StarField() {
       {stars.map((star) => (
         <div
           key={star.id}
-          className="absolute rounded-full bg-primary twinkle"
+          className="absolute rounded-full bg-primary twinkle star"
           style={{
             left: `${star.x}%`,
             top: `${star.y}%`,

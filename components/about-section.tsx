@@ -45,7 +45,7 @@ export function AboutSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">About Me</span>
+            <span className="cosmic-gradient">About Me</span>
           </h2>
           
         </div>

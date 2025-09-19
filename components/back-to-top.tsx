@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowUp } from "lucide-react"
+import { usePortfolioTheme } from "@/components/theme-provider"
 
 export function BackToTop() {
   const [isVisible, setIsVisible] = useState(false)
+  const { theme } = usePortfolioTheme()
 
   // Show button when page is scrolled down 300px
   const toggleVisibility = () => {
@@ -37,7 +39,9 @@ export function BackToTop() {
       {isVisible && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 glass-strong glow rounded-full w-14 h-14 p-0 shadow-lg hover:shadow-xl transition-all duration-300 group"
+          className={`fixed bottom-8 right-8 z-50 glass-strong rounded-full w-14 h-14 p-0 shadow-lg hover:shadow-xl transition-all duration-300 group ${
+            theme === 'cosmic' ? 'glow' : 'galaxy-glow'
+          }`}
           aria-label="Back to top"
         >
           <ArrowUp className="w-6 h-6 group-hover:scale-110 transition-transform duration-200 text-white" />
